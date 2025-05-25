@@ -1,0 +1,131 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "ABeeZee", sans-serif;
+  background-color: #ffffff;
+}
+
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #465EFF;
+  padding: 15px;
+}
+
+.auth-container {
+  background-color: #f2f6ff;
+  padding: 20px 15px;   
+  border-radius: 12px;  
+  box-shadow: 0 0 12px rgba(0,0,0,0.08);
+  width: 100%;
+  max-width: 320px;  
+  text-align: center;
+  position: relative;
+}
+
+.logo {
+  width: 50px;         
+  margin-bottom: 15px;
+}
+.auth-title {
+  font-size: 1.2rem;   
+  color: #465EFF;
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  font-family: inherit;
+  font-size: 0.9rem;    
+  padding: 10px 0;      
+  border-radius: 6px;   
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.2s;
+  width: 100%;
+  font-weight: 600;
+}
+.btn:hover {
+  transform: scale(1.03);
+}
+.btn-primary {
+  background: #FFEA00;
+  color: #222;
+  border: none;
+}
+.btn-outline-light {
+  background: transparent;
+  color: #465EFF;
+  border: 2px solid #465EFF;
+}
+
+.back-button {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.back-button img {
+  width: 24px; 
+  height: 24px;
+  display: block;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;         
+  margin-bottom: 15px;
+}
+.form-group {
+  text-align: left;
+}
+.form-group label {
+  font-size: 0.85rem;   
+  margin-bottom: 4px;
+  display: block;
+  color: #465EFF;     
+  font-weight: bold;
+}
+.form-group input {
+  width: 100%;
+  padding: 8px;        
+  font-size: 0.9rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  color: #000;
+  box-sizing: border-box;
+}
+
+.small {
+  font-size: 0.75rem;
+  color: #666;
+}
+.small a {
+  color: #465EFF;
+  text-decoration: none;
+  font-weight: 600;
+}
+.link-right {
+  text-align: right;
+  margin-top: -8px;
+  margin-bottom: 8px;
+}
+
+.auth-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 15px;
+}
