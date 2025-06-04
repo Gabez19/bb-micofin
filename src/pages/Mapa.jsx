@@ -4,8 +4,7 @@ import { doc, getDoc } from 'firebase/firestore';
 import { db } from '../firebase';
 import Cabecalho from '../components/Cabecalho';
 import MapaIlhas from '../components/MapaIlhas';
-import '../components/Cabecalho.css';
-import '../components/TituloFase.css';
+import './Mapa.css'; // Importe o CSS específico
 
 export default function Mapa() {
   const [xp, setXp] = useState(0);
@@ -40,52 +39,24 @@ export default function Mapa() {
   }, []);
 
   if (carregando) {
-    return (
-      <div style={{ 
-        minHeight: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center'
-      }}>
-        <p>Carregando mapa...</p>
-      </div>
-    );
+    return <div className="carregando-mapa">Carregando...</div>;
   }
 
   return (
-    <div style={{ 
-      minHeight: '100vh', 
-      display: 'flex', 
-      flexDirection: 'column',
-      backgroundColor: '#f5f7fa'
-    }}>
+    <div className="container-mapa-completo">
       <Cabecalho xp={xp} micoins={moedas} />
       
-      <main style={{ 
-        marginTop: '56px',
-        padding: '20px 0',
-        flex: 1
-      }}>
-        <div className='titulo-fase'>
-          <h1 style={{ color: '#465EFF', marginBottom: '8px' }}>Jardim do Início</h1>
-          <p style={{ 
-            color: '#666',
-            maxWidth: '500px',
-            margin: '0 auto',
-            lineHeight: '1.5'
-          }}>
-            Complete as ilhas em ordem para desbloquear novos desafios.
-            A ilha com <span style={{ fontWeight: 'bold' }}>★</span> é a fase bônus!
-          </p>
-        </div>
+      <div className="conteudo-principal-mapa">
+        <h1 className="titulo-fase-mapa">Jardim do Início</h1>
+        <p className="descricao-fase">
+          Complete as ilhas em ordem para desbloquear novos desafios.
+          A ilha com <span className="destaque-boss">★</span> é a fase bônus!
+        </p>
         
-        <div style={{ 
-          margin: '40px auto',
-          position: 'relative'
-        }}>
+        <div className="container-mapa-ilhas">
           <MapaIlhas />
         </div>
-      </main>
+      </div>
     </div>
   );
 }

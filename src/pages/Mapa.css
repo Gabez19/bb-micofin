@@ -1,10 +1,48 @@
-.content {
-  padding: 15px;
+/* src/pages/Mapa.css */
+
+.container-mapa-completo {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-top: 60px; /* Espaço para o cabeçalho */
 }
 
-.map-container {
-  width: 100%;
-  max-width: 400px;
+.conteudo-principal-mapa {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto; /* Permite rolagem se necessário */
+}
+
+.titulo-fase-mapa {
+  color: #465EFF;
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 1.8rem;
+}
+
+.descricao-fase {
+  color: #666;
+  text-align: center;
+  max-width: 500px;
+  margin: 0 auto 30px;
+  line-height: 1.5;
+}
+
+.destaque-boss {
+  font-weight: bold;
+  color: #FF5722;
+}
+
+.container-mapa-ilhas {
+  position: relative;
+  height: calc(100vh - 250px); /* Ajuste conforme necessário */
+  max-height: 800px;
+  margin: 0 auto;
+}
+
+.carregando-mapa {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }

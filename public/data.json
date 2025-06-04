@@ -1,0 +1,164 @@
+{
+  "titulo": "Jardim do Início",
+  "descricao": "Complete as ilhas em ordem para desbloquear novos desafios",
+  "ilhas": [
+    {
+      "id": 1,
+      "nome": "1",
+      "top": "6%",
+      "left": "50%",
+      "concluida": true,
+      "disponivel": true,
+      "isBoss": false,
+      "desafio": {
+        "titulo": "Variáveis e Tipos",
+        "descricao": "Aprenda os fundamentos de variáveis em JavaScript",
+        "link_video": "/videos/variaveis.mp4",
+        "questoes": [
+          {
+            "titulo": "Como declarar uma constante?",
+            "alternativas": ["var", "let", "const", "def"],
+            "resposta_correta": 2,
+            "qtd_xp": 100,
+            "qtd_micoin": 10
+          }
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "nome": "2",
+      "top": "18%",
+      "left": "55%",
+      "concluida": false,
+      "disponivel": true,
+      "isBoss": false,
+      "desafio": {
+        "titulo": "Estruturas Condicionais",
+        "descricao": "Domine if/else e switch",
+        "link_video": "/videos/condicionais.mp4",
+        "questoes": []
+      }
+    },
+    {
+      "id": 3,
+      "nome": "3",
+      "top": "30%",
+      "left": "60%",
+      "concluida": false,
+      "disponivel": false,
+      "isBoss": false,
+      "desafio": {
+        "titulo": "Loops e Iterações",
+        "descricao": "Aprenda while, for e forEach",
+        "link_video": "/videos/loops.mp4",
+        "questoes": []
+      }
+    },
+    {
+      "id": 4,
+      "nome": "4",
+      "top": "30%",
+      "left": "55%",
+      "concluida": false,
+      "disponivel": false,
+      "isBoss": false,
+      "desafio": {
+        "titulo": "Funções Básicas",
+        "descricao": "Crie e execute funções",
+        "link_video": "/videos/funcoes.mp4",
+        "questoes": []
+      }
+    },
+    {
+      "id": 5,
+      "nome": "5",
+      "top": "45%",
+      "left": "50%",
+      "concluida": false,
+      "disponivel": false,
+      "isBoss": false,
+      "desafio": {
+        "titulo": "Arrays",
+        "descricao": "Manipule listas de dados",
+        "link_video": "/videos/arrays.mp4",
+        "questoes": []
+      }
+    },
+    {
+      "id": 6,
+      "nome": "6",
+      "top": "55%",
+      "left": "55%",
+      "concluida": false,
+      "disponivel": false,
+      "isBoss": false,
+      "desafio": {
+        "titulo": "Objetos",
+        "descricao": "Trabalhe com estruturas chave-valor",
+        "link_video": "/videos/objetos.mp4",
+        "questoes": []
+      }
+    },
+    {
+      "id": 7,
+      "nome": "7",
+      "top": "65%",
+      "left": "60%",
+      "concluida": false,
+      "disponivel": false,
+      "isBoss": false,
+      "desafio": {
+        "titulo": "DOM Manipulation",
+        "descricao": "Interaja com elementos da página",
+        "link_video": "/videos/dom.mp4",
+        "questoes": []
+      }
+    },
+    {
+      "id": 8,
+      "nome": "8",
+      "top": "75%",
+      "left": "55%",
+      "concluida": false,
+      "disponivel": false,
+      "isBoss": false,
+      "desafio": {
+        "titulo": "Eventos",
+        "descricao": "Responda a interações do usuário",
+        "link_video": "/videos/eventos.mp4",
+        "questoes": []
+      }
+    },
+    {
+      "id": 9,
+      "nome": "9",
+      "top": "85%",
+      "left": "50%",
+      "concluida": false,
+      "disponivel": false,
+      "isBoss": false,
+      "desafio": {
+        "titulo": "Async/Await",
+        "descricao": "Trabalhe com operações assíncronas",
+        "link_video": "/videos/async.mp4",
+        "questoes": []
+      }
+    },
+    {
+      "id": 10,
+      "nome": "★",
+      "top": "95%",
+      "left": "50%",
+      "concluida": false,
+      "disponivel": false,
+      "isBoss": true,
+      "desafio": {
+        "titulo": "Projeto Final",
+        "descricao": "Junte todos os conceitos aprendidos",
+        "link_video": "/videos/projeto-final.mp4",
+        "questoes": []
+      }
+    }
+  ]
+}
