@@ -69,16 +69,16 @@ const MapaIlhas = ({ ilhasConcluidas = [] }) => {
       .then(data => {
         // Padrão de escada compacto
         const posicoesEscada = [
-          { top: '12%', left: '50%' },   // 1
-          { top: '22%', left: '60%' },   // 2
-          { top: '32%', left: '50%' },   // 3 
-          { top: '42%', left: '60%' },   // 4
-          { top: '52%', left: '50%' },   // 5
-          { top: '62%', left: '60%' },   // 6
-          { top: '72%', left: '50%' },   // 7
-          { top: '80%', left: '60%' },   // 8
-          { top: '88%', left: '50%' },   // 9
-          { top: '94%', left: '50%' }    // 10 (Boss)
+          { top: '8%', left: '45%' },   // 1
+          { top: '18%', left: '55%' },   // 2
+          { top: '28%', left: '65%' },   // 3 
+          { top: '38%', left: '55%' },   // 4
+          { top: '48%', left: '45%' },   // 5
+          { top: '58%', left: '55%' },   // 6
+          { top: '68%', left: '65%' },   // 7
+          { top: '78%', left: '55%' },   // 8
+          { top: '88%', left: '45%' },   // 9
+          { top: '98%', left: '55%' }    // 10 (Boss)
         ];
 
         const ilhasAtualizadas = data.ilhas.map((ilha, index) => ({
