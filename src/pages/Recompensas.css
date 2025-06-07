@@ -1,0 +1,114 @@
+/* Loading */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  text-align: center;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Error */
+.error-container {
+  text-align: center;
+  padding: 3rem;
+  color: #e74c3c;
+}
+
+.retry-button {
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: #7f8c8d;
+}
+
+.empty-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.goto-missions-button {
+  background: #27ae60;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 1.5rem;
+  font-weight: bold;
+}
+
+/* Recompensas */
+.recompensa-item {
+  display: flex;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  margin-bottom: 1rem;
+}
+
+.recompensa-image-container {
+  flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+}
+
+.recompensa-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.recompensa-content {
+  flex: 1;
+}
+
+.recompensa-titulo {
+  margin: 0 0 0.5rem 0;
+  color: #2c3e50;
+}
+
+.recompensa-descricao {
+  margin: 0 0 1rem 0;
+  color: #7f8c8d;
+  line-height: 1.4;
+}
+
+.recompensa-pontos {
+  color: #f39c12;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.recompensa-data {
+  color: #95a5a6;
+  font-size: 0.9rem;
+}

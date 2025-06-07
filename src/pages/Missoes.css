@@ -1,0 +1,138 @@
+.pagina-container {
+  padding: 0 16px;
+  min-height: 100vh;
+  background-color: #f5f7fa;
+  margin-top: 300px;
+}
+
+.pagina-missoes {
+  max-width: 1200px;
+  margin: 20px auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.missoes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 325px));
+  gap: 25px;
+  justify-content: center;
+}
+
+.missao-tipo {
+  max-width: 325px;
+  width: 100%;
+}
+
+.missoes-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+h2 {
+  text-align: center;
+  margin: 24px 0;
+  color: #003366;
+  font-size: 28px;
+}
+
+.subtitulo {
+  background-color: #003366;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  display: inline-block;
+}
+
+.cartao-missao {
+  display: flex;
+  align-items: center;
+  background: #f2f6fc;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  position: relative;
+  transition: all 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.cartao-missao.concluido {
+  background-color: #2d7a2d;
+  color: white;
+}
+
+.icone-status {
+  font-size: 24px;
+  margin-right: 12px;
+  min-width: 24px;
+  text-align: center;
+}
+
+.texto-missao {
+  flex: 1;
+  color: #465EFF;
+  font-size: 14px;
+  line-height: 1.4;
+  margin: 0;
+  padding-right: 10px;
+}
+
+.cartao-missao.concluido .texto-missao {
+  color: #FFFFFF;
+}
+
+.recompensas {
+  display: flex;
+  gap: 12px;
+  font-weight: 600;
+  font-size: 13px;
+  margin-left: 10px;
+  white-space: nowrap;
+}
+
+.moedas, .xp {
+  background: white;
+  border-radius: 50px;
+  color: #555;
+  padding: 4px 10px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.cartao-missao.concluido .moedas,
+.cartao-missao.concluido .xp {
+  background: #48c048;
+  color: white;
+}
+
+.label-concluido {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background: #48c048;
+  color: white;
+  font-weight: 700;
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 8px;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@media (max-width: 768px) {
+  .missoes-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .missao-tipo {
+    max-width: 100%;
+  }
+}

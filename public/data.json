@@ -11,13 +11,34 @@
       "disponivel": true,
       "isBoss": false,
       "desafio": {
-        "titulo": "Variáveis e Tipos",
-        "descricao": "Aprenda os fundamentos de variáveis em JavaScript",
+        "titulo": "O que é dinheiro?",
+        "descricao": "Dinheiro é um meio de troca que usamos para comprar bens e serviços. Ele pode vir em forma de notas, moedas ou até mesmo digitalmente.",
         "link_video": "/videos/variaveis.mp4",
         "questoes": [
           {
-            "titulo": "Como declarar uma constante?",
-            "alternativas": ["var", "let", "const", "def"],
+            "titulo": "O que é dinheiro?",
+            "alternativas": ["Um tipo de fruta", "Um meio de troca", "Uma ferramenta de jardinagem", "Um animal"],
+            "resposta_correta": 1,
+            "qtd_xp": 100,
+            "qtd_micoin": 10
+          },
+          {
+            "titulo": "O que são despesas?",
+            "alternativas": ["O que você ganha", "O que você planta", "O que você gasta", "O que você usa"],
+            "resposta_correta": 2,
+            "qtd_xp": 100,
+            "qtd_micoin": 10
+          },
+          {
+            "titulo": "Dinheiro digital é:",
+            "alternativas": ["Dinheiro em forma física", "Dinheiro que só existe online", "Dinheiro que não pode ser usado", "Dinheiro que não tem valor"],
+            "resposta_correta": 1,
+            "qtd_xp": 100,
+            "qtd_micoin": 10
+          },
+          {
+            "titulo": "Qual é a principal função do dinheiro?",
+            "alternativas": ["Guardar valor", "Servir como decoração", "Ser um meio de troca", "Ser um tipo de investimento"],
             "resposta_correta": 2,
             "qtd_xp": 100,
             "qtd_micoin": 10

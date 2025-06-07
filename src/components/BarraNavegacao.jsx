@@ -1,8 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import './BarraNavegacao.css';
 
 export default function BarraNavegacao() {
-  const [itemAtivo, setItemAtivo] = useState('mapa');
+  const navigate = useNavigate();
+  const location = useLocation();
+  const [itemAtivo, setItemAtivo] = useState('');
+
+  // Atualiza o item ativo baseado na URL atual
+  useEffect(() => {
+    const caminho = location.pathname.split('/')[1]; // pega a primeira parte da URL
+    setItemAtivo(caminho || 'mapa'); // padrão é 'mapa'
+  }, [location]);
 
   const itens = [
     { 
@@ -15,27 +24,34 @@ export default function BarraNavegacao() {
       id: 'missoes', 
       iconeDefault: '/icons/target-default.svg',
       iconeActive: '/icons/target-active.svg',
-      rotulo: 'Missões' 
+      rotulo: 'Missoes' 
     },
     { 
-      id: 'medalha', 
+      id: 'recompensas', 
       iconeDefault: '/icons/medal-default.svg',
       iconeActive: '/icons/medal-active.svg',
-      rotulo: 'Conquistas' 
+      rotulo: 'Recompensas' 
     },
     { 
       id: 'estatisticas', 
       iconeDefault: '/icons/chart-default.svg',
       iconeActive: '/icons/chart-active.svg',
-      rotulo: 'Estatísticas' 
+      rotulo: 'Estatisticas' 
     },
     { 
-      id: 'config', 
+      id: 'configuracoes', 
       iconeDefault: '/icons/config-default.svg',
       iconeActive: '/icons/config-active.svg',
-      rotulo: 'Config' 
+      rotulo: 'Configuracoes' 
     }
   ];
+
+  const handleClick = (id) => {
+    console.log('Clicou em:', id); // Debug
+    console.log('Navegando para:', `/${id}`); // Debug
+    setItemAtivo(id);
+    navigate(`/${id}`);
+  };
 
   return (
     <nav className="barra-navegacao">
@@ -43,7 +59,7 @@ export default function BarraNavegacao() {
         <button
           key={item.id}
           className={`botao-nav ${itemAtivo === item.id ? 'ativo' : ''}`}
-          onClick={() => setItemAtivo(item.id)}
+          onClick={() => handleClick(item.id)}
           aria-label={item.rotulo}
         >
           <div className="icone-container">
