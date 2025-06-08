@@ -1,0 +1,175 @@
+.estatisticas-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  margin-top: 200px;
+}
+
+.conteudo-principal {
+  margin-top: 20px;
+}
+
+.saudacao {
+  color: #003366;
+  margin-bottom: 5px;
+}
+
+.descricao {
+  color: #666;
+  margin-bottom: 30px;
+}
+
+/* Progresso Semanal */
+.progresso-semanal {
+  background: #f5f7fa;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.semanas-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.semana-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 23%;
+}
+
+.semana-icone {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.semana-numero {
+  font-weight: 600;
+  color: #333;
+}
+
+.legenda {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.legenda-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.legenda-cor {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.legenda-cor.verde {
+  background-color: #4CAF50;
+}
+
+.legenda-cor.amarelo {
+  background-color: #FFC107;
+}
+
+.legenda-cor.vermelho {
+  background-color: #F44336;
+}
+
+/* Fases Concluídas */
+.fases-concluidas {
+  background: #f5f7fa;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.fases-lista {
+  margin-top: 15px;
+}
+
+.fase-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.fase-item:last-child {
+  border-bottom: none;
+}
+
+.fase-nome {
+  font-weight: 500;
+}
+
+.fase-status {
+  color: #4CAF50;
+  font-weight: 600;
+}
+
+/* Progresso em Fases */
+.progresso-fases {
+  background: #f5f7fa;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.fase-select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin: 15px 0;
+  font-size: 16px;
+}
+
+.fase-info {
+  margin-top: 20px;
+}
+
+.recompensas-fase {
+  display: flex;
+  gap: 30px;
+}
+
+.recompensa {
+  text-align: center;
+}
+
+.recompensa-valor {
+  display: block;
+  font-size: 24px;
+  font-weight: 700;
+  color: #003366;
+}
+
+.recompensa-label {
+  color: #666;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .semanas-container, .legenda {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  
+  .semana-item {
+    width: 45%;
+  }
+  
+  .legenda-item {
+    width: 100%;
+  }
+}

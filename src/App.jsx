@@ -7,6 +7,7 @@ import Mapa from './pages/Mapa.jsx';
 import Desafio from './pages/Desafio.jsx';
 import Missoes from './pages/Missoes.jsx';  // Importa a página de Missões
 import Recompensas from './pages/Recompensas.jsx'; // Importa a página de Recompensas
+import Estatisticas from './pages/Estatisticas.jsx';
 
 function LayoutComRoteamento() {
   const location = useLocation();
@@ -26,6 +27,7 @@ function LayoutComRoteamento() {
         <Route path="/missoes" element={<Missoes />} />  {/* Rota adicionada */}
         <Route path="/desafio/:ilhaId" element={<Desafio />} />
         <Route path="/recompensas" element={<Recompensas />} />
+        <Route path="/estatisticas" element={<Estatisticas />} />
       </Routes>
     </>
   );
