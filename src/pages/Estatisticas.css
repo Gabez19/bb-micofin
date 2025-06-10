@@ -1,175 +1,219 @@
-.estatisticas-container {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+/* Local: /src/pages/Estatisticas.css */
+/* CÓDIGO CORRIGIDO E REFINADO */
+
+.estatisticas-page .pagina-container {
+  background-color: #f5f7fa;
+  min-height: 100vh;
+  
+  /* A SOLUÇÃO ESTÁ AQUI:
+    Adicionamos um espaçamento no topo do container igual à altura 
+    do cabeçalho (65px) + um respiro (20px).
+    Isso empurra todo o conteúdo para baixo, resolvendo a sobreposição.
+  */
+  padding-top: 85px; 
+  padding-bottom: 90px; /* Espaço para a barra de navegação inferior */
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* O NOVO CONTAINER BRANCO PRINCIPAL */
+.estatisticas-page .stats-content-wrapper {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
-  margin-top: 200px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 30px 40px;
+  box-shadow: 0 8px 32px rgba(0, 42, 117, 0.1);
 }
 
-.conteudo-principal {
-  margin-top: 20px;
+.estatisticas-page .page-header {
+  margin-bottom: 30px;
+  text-align: center;
 }
 
-.saudacao {
+.estatisticas-page .page-header h1 {
   color: #003366;
+  font-size: 28px;
   margin-bottom: 5px;
 }
 
-.descricao {
-  color: #666;
-  margin-bottom: 30px;
+.estatisticas-page .page-header p {
+  color: #555;
+  font-size: 16px;
 }
 
-/* Progresso Semanal */
-.progresso-semanal {
-  background: #f5f7fa;
-  padding: 20px;
-  border-radius: 10px;
-  margin-bottom: 30px;
+/* Card base - AGORA COM FUNDO CINZA CLARO E BORDA */
+.estatisticas-page .card {
+  background-color: #f9faff;
+  /* Fundo cinza bem claro para destacar do container branco */
+  border-radius: 12px;
+  padding: 20px 25px;
+  border: 1px solid #e8effa;
+  transition: border-color 0.2s ease-in-out;
 }
 
-.semanas-container {
+.estatisticas-page .card:hover {
+  border-color: #d1dff2;
+}
+
+.estatisticas-page .card-title {
+  color: #003366;
+  font-size: 20px;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.estatisticas-page .stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+/* Card Semanal */
+.estatisticas-page .semanal-card {
+  grid-column: 1 / -1;
+  background-color: #ffffff;
+  /* Card principal pode ser branco */
+  border-color: #e8effa;
+}
+
+.estatisticas-page .semanas-container,
+.estatisticas-page .legenda {
   display: flex;
-  justify-content: space-between;
-  margin: 20px 0;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
-.semana-item {
+.estatisticas-page .semanas-container {
+  margin-bottom: 25px;
+}
+
+.estatisticas-page .semana-item,
+.estatisticas-page .legenda-item {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  width: 23%;
+  gap: 10px;
 }
 
-.semana-icone {
-  width: 60px;
-  height: 60px;
+.estatisticas-page .semana-item {
+  flex-direction: column;
+}
+
+.estatisticas-page .semana-icone {
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 10px;
 }
 
-.semana-numero {
+.estatisticas-page .semana-numero {
   font-weight: 600;
   color: #333;
+  font-size: 14px;
 }
 
-.legenda {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 20px;
+.estatisticas-page .icone-pequeno {
+  width: 24px;
+  height: 24px;
 }
 
-.legenda-item {
-  display: flex;
-  align-items: center;
-  gap: 8px;
+.estatisticas-page .legenda {
+  border-top: 1px solid #f0f0f0;
+  padding-top: 15px;
+  margin-top: 15px;
+  font-size: 13px;
 }
 
-.legenda-cor {
-  width: 20px;
-  height: 20px;
+.estatisticas-page .legenda-cor {
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
 }
 
-.legenda-cor.verde {
+.estatisticas-page .legenda-cor.verde {
   background-color: #4CAF50;
 }
 
-.legenda-cor.amarelo {
+.estatisticas-page .legenda-cor.amarelo {
   background-color: #FFC107;
 }
 
-.legenda-cor.vermelho {
+.estatisticas-page .legenda-cor.vermelho {
   background-color: #F44336;
 }
 
-/* Fases Concluídas */
-.fases-concluidas {
-  background: #f5f7fa;
-  padding: 20px;
-  border-radius: 10px;
-  margin-bottom: 30px;
+/* Cards de Fase */
+.estatisticas-page .fase-card.concluida {
+  border-left: 5px solid #4CAF50;
+  background-color: #f2fcf2;
 }
 
-.fases-lista {
-  margin-top: 15px;
-}
-
-.fase-item {
+.estatisticas-page .fase-header {
   display: flex;
   justify-content: space-between;
-  padding: 12px 0;
-  border-bottom: 1px solid #e0e0e0;
+  align-items: center;
 }
 
-.fase-item:last-child {
-  border-bottom: none;
-}
-
-.fase-nome {
-  font-weight: 500;
-}
-
-.fase-status {
-  color: #4CAF50;
+.estatisticas-page .fase-nome {
+  margin: 0;
+  font-size: 18px;
+  color: #003366;
   font-weight: 600;
 }
 
-/* Progresso em Fases */
-.progresso-fases {
-  background: #f5f7fa;
-  padding: 20px;
-  border-radius: 10px;
+.estatisticas-page .status-badge {
+  background-color: #4CAF50;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: 600;
 }
 
-.fase-select {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  margin: 15px 0;
-  font-size: 16px;
-}
-
-.fase-info {
-  margin-top: 20px;
-}
-
-.recompensas-fase {
+.estatisticas-page .fase-body {
   display: flex;
-  gap: 30px;
+  justify-content: space-around;
+  gap: 20px;
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #e8effa;
 }
 
-.recompensa {
-  text-align: center;
+.estatisticas-page .fase-card.concluida .fase-body {
+  border-top-color: #d8f0d8;
 }
 
-.recompensa-valor {
-  display: block;
-  font-size: 24px;
+.estatisticas-page .stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.estatisticas-page .stat-icone {
+  width: 28px;
+  height: 28px;
+  margin-bottom: 5px;
+}
+
+.estatisticas-page .stat-icone.xp {
+  color: #ff9800;
+}
+
+.estatisticas-page .stat-icone.micoin {
+  filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.2));
+}
+
+.estatisticas-page .stat-valor {
+  font-size: 22px;
   font-weight: 700;
   color: #003366;
 }
 
-.recompensa-label {
+.estatisticas-page .stat-label {
+  font-size: 13px;
   color: #666;
-  font-size: 14px;
-}
-
-@media (max-width: 768px) {
-  .semanas-container, .legenda {
-    flex-wrap: wrap;
-    gap: 15px;
-  }
-  
-  .semana-item {
-    width: 45%;
-  }
-  
-  .legenda-item {
-    width: 100%;
-  }
 }

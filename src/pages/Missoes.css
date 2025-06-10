@@ -2,7 +2,8 @@
   padding: 0 16px;
   min-height: 100vh;
   background-color: #f5f7fa;
-  margin-top: 300px;
+  /* Espaço grande para garantir que apareça abaixo do cabeçalho */
+  padding-top: 120px; /* Muito mais espaço para navbar + cabeçalho */
 }
 
 .pagina-missoes {
@@ -34,6 +35,9 @@ h2 {
   margin: 24px 0;
   color: #003366;
   font-size: 28px;
+  /* Garantir que o título apareça */
+  position: relative;
+  z-index: 1;
 }
 
 .subtitulo {
@@ -134,5 +138,10 @@ h2 {
   
   .missao-tipo {
     max-width: 100%;
+  }
+  
+  .pagina-container {
+    padding-top: 680px; /* Espaço grande no mobile também */
+    padding-bottom: 80px;
   }
 }
