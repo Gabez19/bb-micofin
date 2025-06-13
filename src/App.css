@@ -1,19 +1,7 @@
-/* Adicione isso no seu CSS global (App.css ou index.css) */
-
-/* Compensa o header fixo em TODAS as páginas */
-body {
-  padding-top: 60px; /* Altura do header */
-}
-
-@media (max-width: 480px) {
-  body {
-    padding-top: 50px; /* Altura menor no mobile */
-  }
-}
-
-/* OU se preferir aplicar só ao container principal */
 .App {
   padding-top: 60px;
+  background-color: #465EFF;
+  min-height: 100vh;
 }
 
 @media (max-width: 480px) {
@@ -22,7 +10,6 @@ body {
   }
 }
 
-/* OU se suas páginas têm uma classe comum */
 .page-container,
 .pagina-container {
   padding-top: 60px;

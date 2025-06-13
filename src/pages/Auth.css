@@ -1,7 +1,6 @@
 html, body {
   margin: 0;
   padding: 0;
-  height: 100%;
   font-family: "ABeeZee", sans-serif;
   background-color: #ffffff;
 }
@@ -79,6 +78,11 @@ html, body {
   width: 24px; 
   height: 24px;
   display: block;
+}
+
+.erro {
+  color: #ff0000;
+  margin-bottom: 10px;
 }
 
 .auth-form {

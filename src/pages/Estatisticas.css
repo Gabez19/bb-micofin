@@ -1,22 +1,12 @@
-/* Local: /src/pages/Estatisticas.css */
-/* CÓDIGO CORRIGIDO E REFINADO */
-
-.estatisticas-page .pagina-container {
+statisticas-page .pagina-container {
   background-color: #f5f7fa;
   min-height: 100vh;
-  
-  /* A SOLUÇÃO ESTÁ AQUI:
-    Adicionamos um espaçamento no topo do container igual à altura 
-    do cabeçalho (65px) + um respiro (20px).
-    Isso empurra todo o conteúdo para baixo, resolvendo a sobreposição.
-  */
   padding-top: 85px; 
   padding-bottom: 90px; /* Espaço para a barra de navegação inferior */
   padding-left: 20px;
   padding-right: 20px;
 }
 
-/* O NOVO CONTAINER BRANCO PRINCIPAL */
 .estatisticas-page .stats-content-wrapper {
   max-width: 1200px;
   margin: 0 auto;
@@ -42,10 +32,8 @@
   font-size: 16px;
 }
 
-/* Card base - AGORA COM FUNDO CINZA CLARO E BORDA */
 .estatisticas-page .card {
   background-color: #f9faff;
-  /* Fundo cinza bem claro para destacar do container branco */
   border-radius: 12px;
   padding: 20px 25px;
   border: 1px solid #e8effa;
@@ -73,7 +61,6 @@
 .estatisticas-page .semanal-card {
   grid-column: 1 / -1;
   background-color: #ffffff;
-  /* Card principal pode ser branco */
   border-color: #e8effa;
 }
 
